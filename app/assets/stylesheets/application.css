@@ -1,0 +1,56 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+ body {
+   font-family: 'Open Sans', sans-serif;
+ }
+
+.logo img {
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  padding: 12px 412px;
+}
+
+.navbar {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.navbar a{
+  padding-left: 140px;
+  color: black;
+}
+
+
+ .footer p{
+   display: block;
+   margin: auto;
+   text-align: right;
+   color: white;
+   margin-bottom: 6px;
+   position: fixed;
+   bottom: 0;
+   right: 35px;
+   background-color: rgba(0,0,0, 0.8);
+   padding: 5px;
+   border-radius: 8px;
+   z-index: 1000;
+ }
