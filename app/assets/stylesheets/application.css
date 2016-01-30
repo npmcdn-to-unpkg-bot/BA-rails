@@ -27,17 +27,30 @@
   margin-right: auto;
   border: 1px solid black;
   padding: 12px 412px;
+  margin-top: 16px;
 }
 
 .navbar {
+  display: inline-block;
+  margin-left: 140px;
+  color: black;
   margin-top: 10px;
-  margin-bottom: 0px;
+  margin-bottom: -15px;
 }
 
-.navbar a{
-  padding-left: 140px;
-  color: black;
+
+.home-page h1 {
+  text-align: center;
 }
+
+.login-btn {
+  border: 1px solid black;
+  padding: 10px;
+  color: black;
+  float: right;
+  margin-left: 2px;
+}
+
 
 
  .footer p{
