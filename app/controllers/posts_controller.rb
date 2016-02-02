@@ -1,5 +1,5 @@
-class PostsController < ApplicationContoller
-  before_action :set_post, only [:edit, :update, :show]
+class PostsController < ApplicationController
+  before_action :set_post, only: [:edit, :update, :show]
   before_action :require_user, except: [:show, :index]
   before_action :require_same_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
@@ -33,7 +33,7 @@ class PostsController < ApplicationContoller
   def update
     if @post.update(post_params)
       flash[:success] = "Your post was updated succesfully!"
-      redirect_to post_path(@post)
+      redirect_to posts_path(@post)
     else
       render :edit
     end
@@ -48,7 +48,7 @@ class PostsController < ApplicationContoller
     private
 
       def post_params
-        params.require(:post).permit(:title, :description)
+        params.require(:post).permit(:title, :description, :picture)
       end
 
       def set_post
@@ -58,7 +58,7 @@ class PostsController < ApplicationContoller
       def require_same_user
         if current_user != @post.user and !current_user.admin?
           flash[:danger] = "you can only edit your own posts."
-          redirect_to post_path
+          redirect_to posts_path
         end
       end
 
@@ -67,7 +67,3 @@ class PostsController < ApplicationContoller
       end
 
     end
-
-
-
-end

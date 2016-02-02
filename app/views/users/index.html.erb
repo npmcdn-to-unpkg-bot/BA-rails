@@ -1,0 +1,32 @@
+<%= render 'shared/page_title', title: "All Users" %>
+
+<ul class="nav nav-tabs">
+    <li>
+      <%= link_to "Posts", posts_path %>
+    </li>
+    <li class="active">
+      <%= link_to "Users", users_path %>
+    </li>
+</ul>
+
+<div class="row">
+  <div class="col-md-4 col-md-offset-4 center">
+    <%= will_paginate @user %>
+  </div>
+</div>
+
+<% @user.each do |user| %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 center">
+      <%= link_to '', '' %>
+      <p>
+        <h2>User: <%= user.username %></h2>
+        <div class="col-md-4">
+            <a href="/user/<%= user.id%>">
+                <%= image_tag(user.picture.url, size: "380x260") %>
+                </a>
+          </div>
+      </p>
+    </div>
+  </div>
+  <% end %>

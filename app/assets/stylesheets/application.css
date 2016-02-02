@@ -20,21 +20,20 @@
    font-family: 'Open Sans', sans-serif;
  }
 
+ h1 {
+   text-align: center;
+ }
+
 .logo img {
-  align-items: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid black;
-  padding: 7px 409px;
-  margin-top: 4px;
+  width: 214px;
+  margin-left: -206px;
+margin-top: -24px;
 }
 
 .navbar {
   display: inline-block;
-  margin-left: 140px;
+  margin-left: 138px;
   color: black;
-  margin-top: 10px;
   margin-bottom: -15px;
 }
 
@@ -52,7 +51,11 @@
   margin-top: 3px;
 }
 
-
+.submit-btn {
+  order: 1px solid black;
+  padding: 5px;
+  color: black;
+}
 
  .footer p{
    display: block;

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/home', to: 'pages#home'
 
   resources :users
+  resources :posts
 
   get '/register', to: 'users#new'
 

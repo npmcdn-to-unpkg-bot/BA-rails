@@ -2,25 +2,18 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
+        <div class="logo">
+          <a href="#img"><img src="../logo.jpg" alt="" /></a>
+        <%= link_to "Log Out", '/logout', class: "login-btn" %>
         <%= link_to "Sign up now!", register_path, class: "login-btn" %>
         <%= link_to "Login In", '/login', class: "login-btn" %>
-      </div>
-    </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="logo">
-            <a href="#img"><img src="../logo.jpg" alt="" /></a>
-          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
               <%= link_to "HOME", '/home', class: "navbar" %>
               <%= link_to "ABOUT US", '', class: "navbar" %>
-              <%= link_to "BLOGGERS", '', class: "navbar" %>
+              <%= link_to "BLOGGERS", '/users', class: "navbar" %>
               <%= link_to "TOPICS", '', class: "navbar" %>
               <%= link_to "CONTACT US", '', class: "navbar" %>
-        </div>
+              <hr>
       </div>
     </div>
   </div>
