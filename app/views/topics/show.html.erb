@@ -1,0 +1,33 @@
+<%= render 'shared/page_title', title: "Posts for: " + @topic.name "."%>
+
+<ul class="nav nav-tabs">
+  <li class="active">
+    <%= link_to "Posts", posts_path %>
+  </li>
+  <li>
+    <%= link_to "Users", users_path %>
+  </li>
+</ul>
+
+<%= will_paginate @posts %>
+
+<% @topic.posts.each do |post| %>
+<div class="row">
+  <div class="col-lg-6 well">
+  <h4><%= link_to post.title, posts_path(post) %></h4>
+  <p><%= post.description %></p>
+  <p>Topic: <%= render post.topic %></p>
+  <p>
+    <span class='quite'><small> created: <%= time_ago_in_words(post.created_at) %> ago,</small></span>
+    <span class='quite'><small>updated: <%= time_ago_in_words(post.updated_at) %> ago</small></span>
+  </p>
+  </div>
+  <div class="col-md-4">
+    <%= image_tag(post.picture.url, size: "250x150", class: "gravatar") if post.picture?  %>
+  </div>
+
+</div>
+<hr/>
+<% end %>
+
+<%= will_paginate @posts %>

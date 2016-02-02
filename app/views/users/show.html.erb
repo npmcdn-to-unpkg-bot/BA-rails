@@ -1,19 +1,12 @@
 <% render 'shared/page_title', title: "User: " + @user.username %>
 
-<div class="row">
-  <div class="col-md-4 col-md-offset-4 center">
-    <h3><em>Posts:</em></h3>
-    <%= will_paginate @posts %>
-  </div>
-</div>
-
 <% @posts.each do |post| %>
  <div class="row">
    <div class="col-lg-6 col-lg-offset-3 well">
-     <h4><%= link_to post.title, posts_path(post) %></h4>
+     <h4><%= link_to post.title, users_path(post) %></h4>
      <p>
-       <span class='quite'><small> created: <%= time_ago_in_words(recipe.created_at) %> ago,</small></span>
-        <span class='quite'><small>updated: <%= time_ago_in_words(recipe.updated_at) %> ago</small></span>
+       <span class='quite'><small> created: <%= time_ago_in_words(post.created_at) %> ago,</small></span>
+        <span class='quite'><small>updated: <%= time_ago_in_words(post.updated_at) %> ago</small></span>
      </p>
    </div>
  </div>
