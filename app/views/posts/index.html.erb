@@ -1,4 +1,4 @@
-<%= render 'shared/page_title', title: "All Posts" %>
+<%= render 'shared/page_title', title: "P O S T S" %>
 
 <!-- <ul class="nav nav-tabs">
   <li class="active">
@@ -16,7 +16,7 @@
 <div class="col-md-4 posts-text">
     <a href="/posts/<%= post.id%>">
         <span class="text"><%= post.title %></span>
-        <%= image_tag(post.picture.url, size: "300x300", class: "pictures-show") %>
+        <%= image_tag(post.picture.url, size: "350x300", class: "pictures-show") %>
         </a>
   </div>
 <% end %>

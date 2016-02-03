@@ -48,7 +48,7 @@ class PostsController < ApplicationController
     private
 
       def post_params
-        params.require(:post).permit(:title, :description, :picture)
+        params.require(:post).permit(:title, :description, :picture, topic_ids: [])
       end
 
       def set_post
@@ -56,7 +56,7 @@ class PostsController < ApplicationController
       end
 
       def require_same_user
-        if current_user != @post.user and !current_user.admin?
+        if current_user != @post.user
           flash[:danger] = "you can only edit your own posts."
           redirect_to posts_path
         end

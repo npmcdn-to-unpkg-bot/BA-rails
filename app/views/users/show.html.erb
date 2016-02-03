@@ -1,9 +1,39 @@
 <% render 'shared/page_title', title: "User: " + @user.username %>
 
+
+<%= image_tag(@user.picture.url, class: "img-circle", size: "50x50") %>
+<%= link_to "Edit your Profile", edit_user_path, class: "btn btn-warning" %>
+
+<br>
+<br>
+
+
+
+<ul class="nav_ul_item">
+<li class="dropdown">
+  <%= link_to '#', class: "btn btn-default dropdown-toggle", 'data-toggle' => "dropdown" do %>
+    Make your topic <b class="caret"></b>
+    <% end %>
+    <ul class="dropdown-menu">
+      <% Topic.all.each do |topic| %>
+        <li><%= link_to topic.name, topic_path(topic) %></li>
+      <% end %>
+      <% if logged_in? %>
+      <li class="divider"></li>
+      <li>
+        <%= link_to(new_topic_path) do %>
+        New Topic
+      <% end %>
+      </li>
+      <% end %>
+    </ul>
+</li>
+</ul>
+
 <% @posts.each do |post| %>
  <div class="row">
    <div class="col-lg-6 col-lg-offset-3 well">
-     <h4><%= link_to post.title, posts_path(post) %></h4>
+     <h4><%= link_to post.title, posts_path(post.id) %></h4>
      <p>
        <span class='quite'><small> created: <%= time_ago_in_words(post.created_at) %> ago,</small></span>
         <span class='quite'><small>updated: <%= time_ago_in_words(post.updated_at) %> ago</small></span>

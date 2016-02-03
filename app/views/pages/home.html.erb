@@ -18,40 +18,30 @@
         <div class="item active">
           <img src="../1.jpg">
            <div class="carousel-caption">
-            <h4><a href="#">Lorem ipsum dolor sit amet consetetur sadipscing</a></h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
           </div>
         </div><!-- End Item -->
 
          <div class="item">
           <img src="../2.jpg">
            <div class="carousel-caption">
-            <h4><a href="#">consetetur sadipscing elitr, sed diam nonumy eirmod</a></h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
           </div>
         </div><!-- End Item -->
 
         <div class="item">
           <img src="../1.jpg">
            <div class="carousel-caption">
-            <h4><a href="#">tempor invidunt ut labore et dolore</a></h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
           </div>
         </div><!-- End Item -->
 
         <div class="item">
           <img src="../8.jpg">
            <div class="carousel-caption">
-            <h4><a href="#">magna aliquyam erat, sed diam voluptua</a></h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
           </div>
         </div><!-- End Item -->
 
         <div class="item">
           <img src="../2.jpg">
            <div class="carousel-caption">
-            <h4><a href="#">tempor invidunt ut labore et dolore magna aliquyam erat</a></h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
           </div>
         </div><!-- End Item -->
 
@@ -59,11 +49,11 @@
 
 
     <ul class="list-group col-sm-4">
-      <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Lorem ipsum dolor sit amet consetetur sadipscing</h4></li>
-      <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>consetetur sadipscing elitr, sed diam nonumy eirmod</h4></li>
-      <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>tempor invidunt ut labore et dolore</h4></li>
-      <li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>magna aliquyam erat, sed diam voluptua</h4></li>
-      <li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4>tempor invidunt ut labore et dolore magna aliquyam erat</h4></li>
+      <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Bravo | Alberto <br><br> A better way to view my work and my friends.</h4></li>
+      <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>Why did I ever start programming.</h4></li>
+      <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>Remember to help as most people as you can everyday.</h4></li>
+      <li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>P U E R T O <br> R I C O</h4></li>
+      <li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4>Photography by young artist.</h4></li>
     </ul>
 
       <!-- Controls -->
@@ -82,14 +72,3 @@
 </br>
 </br>
 </br>
-
-
-
-<% @posts.each do |post| %>
-<div class="col-md-4 posts-text">
-    <a href="/posts/<%= post.id%>">
-        <span class="text"><%= post.title %></span>
-        <%= image_tag(post.picture.url, size: "300x300", class: "pictures-show") %>
-        </a>
-  </div>
-<% end %>
