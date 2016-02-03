@@ -3,7 +3,7 @@
 <% @posts.each do |post| %>
  <div class="row">
    <div class="col-lg-6 col-lg-offset-3 well">
-     <h4><%= link_to post.title, users_path(post) %></h4>
+     <h4><%= link_to post.title, posts_path(post) %></h4>
      <p>
        <span class='quite'><small> created: <%= time_ago_in_words(post.created_at) %> ago,</small></span>
         <span class='quite'><small>updated: <%= time_ago_in_words(post.updated_at) %> ago</small></span>

@@ -9,24 +9,15 @@
     </li>
 </ul> -->
 
-<div class="row">
-  <div class="col-md-4 col-md-offset-4 center">
+
     <%= will_paginate @user %>
-  </div>
-</div>
+
 
 <% @user.each do |user| %>
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4 center">
-      <%= link_to '', '' %>
-      <p>
-        <h2>User: <%= user.username %></h2>
-        <div class="col-md-4">
+        <div class="col-md-4 posts-text">
             <a href="/users/<%= user.id%>">
+              <span class="text-user"> <%= user.username %></span>
                 <%= image_tag(user.picture.url, class: "img-circle", size: "250x250") %>
                 </a>
           </div>
-      </p>
-    </div>
-  </div>
   <% end %>

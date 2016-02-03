@@ -13,8 +13,27 @@
               <%= link_to "ABOUT US", '', class: "navbar" %>
               <%= link_to "POSTS", '/posts', class: "navbar" %>
               <%= link_to "BLOGGERS", '/users', class: "navbar" %>
-              <%= link_to "TOPICS", '/topics', class: "navbar" %>
               <%= link_to "CONTACT US", '', class: "navbar" %>
+              <ul class="nav_ul_item">
+              <li class="dropdown">
+                <%= link_to '#', class: "btn btn-default dropdown-toggle", 'data-toggle' => "dropdown" do %>
+                  Topics <b class="caret"></b>
+                  <% end %>
+                  <ul class="dropdown-menu">
+                    <% Topic.all.each do |topic| %>
+                      <li><%= link_to topic.name, topic_path(topic) %></li>
+                    <% end %>
+                    <% if logged_in? %>
+                    <li class="divider"></li>
+                    <li>
+                      <%= link_to(new_topic_path) do %>
+                      New Topic
+                    <% end %>
+                    </li>
+                    <% end %>
+                  </ul>
+              </li>
+            </ul>
               <hr>
       </div>
     </div>

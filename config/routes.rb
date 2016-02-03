@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :posts
-  resources :topics
+  resources :topics, only: [:new, :create, :show]
 
   get '/register', to: 'users#new'
 

@@ -1,4 +1,5 @@
-class TopicsContoller < ApplicationController
+class TopicsController < ApplicationController
+  before_action :require_user, except: [:show]
 
   def show
     @topic = Topic.find(params[:id])
