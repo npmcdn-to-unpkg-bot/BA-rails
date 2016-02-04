@@ -14,12 +14,13 @@
  *= require_self
  */
 
+
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans);
  @import "demo.css";
  @import "style3.css";
- @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
  body {
-   font-family: 'Open Sans', sans-serif;
+   font-family: 'Open Sans', sans-serif !important;
    background-color: white;
  }
 
@@ -45,6 +46,7 @@
   margin-bottom: -15px;
   font-weight: bold;
   z-index: 1000;
+  margin-top: 20px;
 }
 
 .cb-slideshow, .cb-slideshow:after {
