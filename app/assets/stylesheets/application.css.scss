@@ -27,12 +27,15 @@
    text-align: center;
  }
 
+ .logo {
+   z-index: 1000;
+ }
+
 .logo img {
-  width: 259px;
-  margin-left: -240px;
-  margin-top: -36px;
-  margin-bottom: -60px;
+  width: 73px;
+  margin-left: -152px;
   z-index: 1000;
+  float: left;
 }
 
 .navbar {
@@ -43,6 +46,15 @@
   font-weight: bold;
   z-index: 1000;
 }
+
+.cb-slideshow, .cb-slideshow:after {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+  }
 
 
 
