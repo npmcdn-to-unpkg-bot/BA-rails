@@ -2,13 +2,14 @@
 
 
 <%= image_tag(@user.picture.url, class: "img-circle", size: "50x50") %>
+<% if logged_in? %>
 <%= link_to "Edit your Profile", edit_user_path, class: "btn btn-warning" %>
-
+<% end %>
 <br>
 <br>
 
 
-
+<% if logged_in? %>
 <ul class="nav_ul_item">
 <li class="dropdown">
   <%= link_to '#', class: "btn btn-default dropdown-toggle", 'data-toggle' => "dropdown" do %>
@@ -29,6 +30,7 @@
     </ul>
 </li>
 </ul>
+<% end %>
 
 <% @posts.each do |post| %>
  <div class="row">

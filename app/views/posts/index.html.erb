@@ -13,10 +13,10 @@
 
 
 <% @posts.each do |post| %>
-<div class="col-md-4 posts-text">
+<div class="col-md-4">
     <a href="/posts/<%= post.id%>">
         <span class="text"><%= post.title %></span>
-        <%= image_tag(post.picture.url, size: "350x300", class: "pictures-show") %>
+        <%= image_tag(post.picture.url, width:"350", height:"350", class: "pictures-show") %>
         </a>
   </div>
 <% end %>
