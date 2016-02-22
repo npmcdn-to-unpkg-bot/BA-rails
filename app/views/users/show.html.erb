@@ -33,13 +33,10 @@
 <% end %>
 
 <% @posts.each do |post| %>
- <div class="row">
-   <div class="col-lg-6 col-lg-offset-3 well">
-     <h4><%= link_to post.title, posts_path(post.id) %></h4>
-     <p>
-       <span class='quite'><small> created: <%= time_ago_in_words(post.created_at) %> ago,</small></span>
-        <span class='quite'><small>updated: <%= time_ago_in_words(post.updated_at) %> ago</small></span>
-     </p>
-   </div>
- </div>
- <% end %>
+<div class="col-md-4">
+    <a href="/posts/<%= post.id%>">
+        <span class="text"><%= post.title %></span>
+        <%= image_tag(post.picture.url, width:"350", height:"350", class: "pictures-show") %>
+        </a>
+  </div>
+<% end %>

@@ -9,9 +9,13 @@
   </div>
 
   <div class="col-md-6">
+    <% if @post.topics.any? %>
+  <p>Styles: <%= render @post.topics %> </p>
+  <% end %>
     <p class="description-text">
       Description:
       <%= @post.description %>
+
       <h5>Brought to you by: <%= @post.user.username %></h5>
     </p>
   </div>

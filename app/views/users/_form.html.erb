@@ -2,16 +2,16 @@
 
 <div class="row">
   <div class="well col-md-8 col-md-offset-2">
-    <%= form_for @user do |f| %>
+    <%= form_for  @user do |f| %>
       <%= f.label :username %>
       <%= f.text_field :username %>
-
+      <br>
       <%= f.label :email %>
       <%= f.text_field :email %>
-
+      <br>
       <%= f.label :password %>
       <%= f.password_field :password %>
-
+      <br>
       <br><br>
     <span class="picture">
       <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
@@ -21,6 +21,9 @@
       <% end %>
   </div>
 </div>
+
+
+
 
 <script type="text/javascript">
   $('#user_picture').bind('change', function() {
