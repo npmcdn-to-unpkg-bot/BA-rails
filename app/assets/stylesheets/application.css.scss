@@ -35,7 +35,7 @@
  }
 
 .logo img {
-  width: 73px;
+  width: 133px;
   margin-left: -152px;
   z-index: 1000;
   float: left;
@@ -193,6 +193,15 @@
   .col-style .col-icon h2 i{
     text-align: center;
     font-size: 2em;
+  }
+
+  .topics-choose a{
+    display: inline-block;
+  }
+
+  .topics-choose h3 {
+    font-size: 15px;
+    margin: 0 20px 0 20px;
   }
 
 
