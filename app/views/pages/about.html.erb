@@ -17,3 +17,12 @@
 <div class="col-md-6 about-us-img">
     <img src="../me.jpg" alt="" />
 </div>
+
+<div class="logo">
+  <% if logged_in? %>
+  <%= link_to "Log Out", '/logout', class: "login-btn" %>
+  <%= link_to "Create New Post", '/posts/new', class: "login-btn" %>
+  <% else %>
+  <%= link_to "Admin", '/login', class: "login-btn" %>
+  <% end %>
+</div>

@@ -5,17 +5,13 @@
 
 <% @topic.posts.each do |post| %>
 <div class="row">
-  <div class="col-lg-6 well">
+  <div class="col-lg-8">
   <h4><%= link_to post.title, posts_path(post) %></h4>
   <p><%= post.description %></p>
   <p>Topic: <%= render post.topics %></p>
-  <p>
-    <span class='quite'><small> created: <%= time_ago_in_words(post.created_at) %> ago,</small></span>
-    <span class='quite'><small>updated: <%= time_ago_in_words(post.updated_at) %> ago</small></span>
-  </p>
   </div>
   <div class="col-md-4">
-    <%= image_tag(post.picture.url, size: "250x150", class: "gravatar") if post.picture?  %>
+    <%= image_tag(post.picture.url, class: "topic-image", style: "width: 39%;") if post.picture?  %>
   </div>
 
 </div>
