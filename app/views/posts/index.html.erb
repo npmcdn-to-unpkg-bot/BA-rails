@@ -9,7 +9,7 @@
   </li>
 </ul> -->
 
-<%= will_paginate %>
+
 <div class="topics-choose">
   <a href="/topics/1"><h3>Work</h3></a>
   <a href="/topics/2"><h3>Educational</h3></a>
@@ -18,10 +18,11 @@
 </div>
 
 <% @posts.each do |post| %>
-<div class="col-md-4">
+<div class="col-md-6">
     <a href="/posts/<%= post.id%>">
         <span class="text"><%= post.title %></span>
         <%= image_tag(post.picture.url, style: "width: 100%;", class: "pictures-show") %>
         </a>
   </div>
 <% end %>
+<%= will_paginate @posts %>

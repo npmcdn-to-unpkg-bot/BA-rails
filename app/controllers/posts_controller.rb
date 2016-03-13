@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @posts = Post.paginate(page: params[:page], per_page: 10)
+    @posts = Post.paginate(page: params[:page], per_page: 3)
   end
 
   def show
