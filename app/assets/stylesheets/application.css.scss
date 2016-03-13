@@ -177,13 +177,17 @@
     justify-content: flex-end;
   }
 
+  .location {
+    font-size: 20px;
+  }
+
   .editanddelete {
     text-align: center;
     margin: 40px;
   }
 
   .col-style .col-icon{
-    border: 1px solid gray;
+    border: 1px dashed black;
     height: 100px;
     text-align: center;
     padding: 20px 0;
