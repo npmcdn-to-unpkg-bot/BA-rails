@@ -1,24 +1,28 @@
 <%= render 'shared/page_title', title: @post.title %>
 
 
-  <div class="col-md-6">
+  <div class="col-md-12">
+    <div class="row">
     <div class="show_picture">
       <%= image_tag(@post.picture.url, class: "img-show") if @post.picture? %>
-
+    </div>
     </div>
   </div>
 
-  <div class="col-md-6">
-    <% if @post.topics.any? %>
-  <p>Styles: <%= render @post.topics %> </p>
-  <% end %>
+  <div class="col-md-12">
+    <div class="row">
+
     <p class="description-text">
-      Description:
+      Description: <br>
       <%= @post.description %>
 
-      <h5>Brought to you by: <%= @post.user.username %></h5>
+      <h5>Brought by: <%= @post.user.username %></h5>
+      <% if @post.topics.any? %>
+    <p>Styles: <%= render @post.topics %> </p>
+    <% end %>
     </p>
   </div>
+</div>
 </div>
 
 <div class="col-md-12">
