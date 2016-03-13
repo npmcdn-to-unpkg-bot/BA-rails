@@ -113,7 +113,7 @@
     margin: 5px;
     top: 0%;
     color: white;
-    padding-top: 35%;
+    padding-top: 22%;
     background-color: rgba(0, 0, 0, 0.4);
     font-weight: bold;
     font-size: 30px;
@@ -168,9 +168,10 @@
   }
 
   .description-text {
-    border: 1px solid black;
+    border: 1px dashed black;
     padding: 20px;
     margin-left: 50px;
+    text-align: center;
   }
 
   .editanddelete {

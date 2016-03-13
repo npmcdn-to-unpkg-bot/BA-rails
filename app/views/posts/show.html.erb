@@ -27,7 +27,7 @@
      <span class='quite'><small>updated: <%= time_ago_in_words(@post.updated_at) %> ago</small></span>
     <% if logged_in? %>
   <%= link_to "Edit", edit_post_path(@post), class: "btn btn-warning" %>
-  <%= link_to "[Delete Recipe]", @post, method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
+  <%= link_to "[Delete Posts]", @post, method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
   <% end %>
   </div>
 </div>
