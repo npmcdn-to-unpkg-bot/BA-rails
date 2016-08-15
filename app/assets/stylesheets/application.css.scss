@@ -1,22 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
-
-
- // @import url(https://fonts.googleapis.com/css?family=Raleway);
  @import url(https://fonts.googleapis.com/css?family=Lato);
  @import "demo.css";
  @import "style3.css";
@@ -25,274 +6,141 @@
 
  body {
    font-family: 'Lato', sans-serif !important;
-   background-color: #EAEAEA;
+   background-color: white;
  }
 
- h1 {
+ // nav bar START
+
+ .namebrand img {
+   width: 230px;
+ }
+
+ul#navbar {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+  word-spacing: 10px;
+  font-weight: bolder;
+  color: black;
+  font-size: 10px;
+}
+
+ul#navbar:hover li > a {
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+nav > ul > li {
+  display: inline;
+  text-decoration: none;
+}
+
+ // nav bar FINISH
+
+
+ // HOME PAGE START
+
+ .imgfront img{
+   width: 95%;
+   display: block;
+   margin: auto;
+   vertical-align: middle;
    text-align: center;
  }
 
- .logo {
-   z-index: 1000;
+ .imgfront:hover img{
+   opacity: 1px;
  }
 
-.logo img {
-  width: 133px;
-  margin-left: -152px;
-  z-index: 1000;
-  float: left;
-}
-
-.navbar {
-  display: inline-block;
-  margin-left: 192px;
-  float: left;
-  color: black;
-  margin-bottom: -15px;
-  font-weight: bold;
-  z-index: 1000;
-  margin-top: 20px;
-  }
-
-  // .navbar:hover {
-  //   background-color: lightblue;
-  //   font-size: 30px;
-  //   transition: 1s;
-  // }
-
-  .about-us-info {
-    padding: 64px;
-    margin-top: 40px;
-  }
-
-  .about-us-img img{
-    width: 300px;
-    height: auto;
-    margin-top: 40px;
-  }
-
-
-.cb-slideshow, .cb-slideshow:after {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: -1;
-  }
-
-
-
-.home-page h1 {
-  text-align: center;
-}
-
-.login-btn {
-  border: 1px solid black;
-  padding: 5px;
-  color: black;
-  float: right;
-  margin-left: 2px;
-  margin-top: 3px;
-  z-index: 1000;
-}
-
-.submit-btn {
-  order: 1px solid black;
-  padding: 5px;
-  color: black;
-}
-
-.pictures-show {
-  margin: 5px;
-
-}
-
-.text {
-    position: absolute;
-    margin: 5px;
-    top: 0%;
-    color: white;
-    padding-top: 22%;
-    background-color: rgba(0, 0, 0, 0.4);
-    font-weight: bold;
-    font-size: 30px;
-    width: 95%;
-    height: 97%;
-    vertical-align: middle;
-    text-align: center;
-    z-index: 10;
-    opacity: 0;
-    -webkit-transition: all 0.1s ease;
-    -moz-transition: all 0.1s ease;
-    -o-transition: all 0.1s ease;
-    transition: all 0.1s ease;
-}
-
-  .text:hover {
-      opacity:1;
-  }
-
-  .text-user {
-    position: absolute;
-    top: 0%;
-    color: white;
-    padding-top: 35%;
-    background-color: rgba(0,0,0,0.4);
-    font-weight: bold;
-    font-size: 30px;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    vertical-align: middle;
-    text-align: center;
-    z-index: 10;
-    opacity: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    filter: invert(100%);
-
-  }
-
-  .text-user:hover{
-    opacity: 1;
-    border-radius: 50%;
-    filter: invert(100%);
-  }
-
-  .img-show {
-    margin-left: auto;
-    margin-right: auto;
-    float: left;
-    width: 100%
-  }
-
-  .description-text {
-    padding: 20px;
-    font-size: 19px;
-    text-align: -webkit-auto;
-    margin-top: 10px;
-    justify-content: flex-end;
-  }
-
-  .location {
-    font-size: 20px;
-  }
-
-  .editanddelete {
-    text-align: center;
-    margin: 40px;
-  }
-
-  .col-style .col-icon{
-    border: 1px dashed black;
-    height: 100px;
-    text-align: center;
-    padding: 20px 0;
-    margin: 5px 0;
-    margin-top: 20px;
-  }
-
-  .col-style .col-icon h2{
-    text-align: center;
-    font-size: 1.2em;
-    color: black;
-  }
-
-  .col-style .col-icon h2 i{
-    text-align: center;
-    font-size: 2em;
-  }
-
-  .topics-choose a{
-    display: inline-block;
-  }
-
-  .topics-choose h3 {
-    font-size: 15px;
-    margin: 0 20px 0 20px;
-  }
-
-
- .footer p{
+ .imgfront h1{
    display: block;
-   margin: auto;
-   text-align: right;
-   color: white;
-   margin-bottom: 6px;
-   position: fixed;
-   bottom: 0;
-   right: 35px;
-   background-color: rgba(0,0,0, 0.8);
-   padding: 5px;
-   border-radius: 8px;
-   z-index: 1000;
+   text-align: center;
  }
 
+ .paragraphhome h1{
+   text-align: center;
+   margin: auto;
+ }
 
-#myCarousel .carousel-caption {
-    left:0;
-	right:0;
-	bottom:0;
-	text-align:left;
-	padding:10px;
-	background:rgba(0,0,0,0.6);
-	text-shadow:none;
-}
+  .paragraphhome p{
+    text-align: center;
+    margin: auto;
+    max-width:600px;
+    font-size: 100%;
+  }
 
-#myCarousel .list-group {
-	position:absolute;
-	top:0;
-	right:0;
-}
-#myCarousel .list-group-item {
-	border-radius:0px;
-	cursor:pointer;
-}
-#myCarousel .list-group .active {
-	background-color:#eee;
-}
+  ////////
 
-@media (min-width: 992px) {
-	#myCarousel {padding-right:33.3333%;}
-	#myCarousel .carousel-controls {display:none;}
+  .portfolio-box {
+  position: relative;
+  display: block;
+  max-width: 650px;
+  margin: 0 auto;
 }
-@media (max-width: 991px) {
-	.carousel-caption p,
-	#myCarousel .list-group {display:none;}
+.portfolio-box .portfolio-box-caption {
+  color: white;
+  opacity: 0;
+  display: block;
+  background: rgba(181, 181, 181, 0.76);
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
 }
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  padding: 0 15px;
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+  font-size: 18px;
+}
+.portfolio-box:hover .portfolio-box-caption {
+  opacity: 1;
+}
+.portfolio-box:focus {
+  outline: none;
+}
+@media (min-width: 768px) {
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    font-size: 16px;
+  }
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 22px;
+  }
+}
+ // HOME PAGE FINISH
 
-
-.nav-sidebar {
-    width: 100%;
-    padding: 8px 0;
-    border-right: 1px solid #ddd;
-}
-.nav-sidebar a {
-    color: white;
-    -webkit-transition: all 0.08s linear;
-    -moz-transition: all 0.08s linear;
-    -o-transition: all 0.08s linear;
-    transition: all 0.08s linear;
-}
-.nav-sidebar .active a {
-    cursor: default;
-    background-color: white;
-    color: black;
-}
-.nav-sidebar .active a:hover {
-    background-color: white;
-}
-.nav-sidebar .text-overflow a,
-.nav-sidebar .text-overflow .media-body {
-    white-space: nowrap;
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-}
-
-.codrops-top a:hover {
-    color: #2CCFEC;
+.footer p{
+  position: fixed;
+  bottom: 0;
+  height: 0;
+  background: #f0f0f0;
+  width: 100%;
 }

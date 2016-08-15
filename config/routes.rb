@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/home', to: 'pages#home'
   get '/about', to: 'pages#about'
-  get '/contact', to: 'pages#contact'
+  # get '/contact', to: 'pages#contact'
 
   resources :users
   resources :posts
@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   get '/login', to: 'logins#new'
   post '/login', to: 'logins#create'
   get '/logout', to: 'logins#destroy'
+
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
 
 
 

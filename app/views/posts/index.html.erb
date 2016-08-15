@@ -18,10 +18,10 @@
 </div>
 
 <% @posts.each do |post| %>
-<div class="col-md-6">
+<div class="col-md-6 grid" id="postimg">
     <a href="/posts/<%= post.id%>">
         <span class="text"><%= post.title %></span>
-        <%= image_tag(post.picture.url, style: "width: 100%;", class: "pictures-show") %>
+        <%= image_tag(post.picture.url, class: "grid-item", id: "img") %>
         </a>
   </div>
 <% end %>
