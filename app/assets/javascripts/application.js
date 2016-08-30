@@ -79,3 +79,18 @@ image: {
 });
 
 });
+
+jQuery(document).ready(function() {
+  var $container = $('#Masonry');
+  $container.imagesLoaded(function() {
+    $container.masonry({
+      itemSelector: '.item',
+      isAnimated: true,
+      animationOptions: {
+        duration: 750,
+        easing: 'linear',
+        queue: false
+      }
+    });
+  });
+})

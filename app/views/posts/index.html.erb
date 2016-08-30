@@ -1,4 +1,4 @@
-<%= render 'shared/page_title', title: "C A T O L O G" %>
+<%= render 'shared/page_title', title: "C A T O L O G"  %>
 
 <!-- <ul class="nav nav-tabs">
   <li class="active">
@@ -11,18 +11,23 @@
 
 
 <div class="topics-choose">
-  <a href="/topics/1"><h3>Work</h3></a>
-  <a href="/topics/2"><h3>Educational</h3></a>
-  <a href="/topics/3"><h3>Insight</h3></a>
+  <a href="/topics/1"><h3>WORK</h3></a>
+  <a href="/topics/2"><h3>EDUCATIONAL</h3></a>
+  <a href="/topics/3"><h3>INSIGHT</h3></a>
   <hr>
 </div>
 
+<br>
+<br>
+<br>
+
 <% @posts.each do |post| %>
-<div class="col-md-6 grid" id="postimg">
-    <a href="/posts/<%= post.id%>">
-        <span class="text"><%= post.title %></span>
-        <%= image_tag(post.picture.url, class: "grid-item", id: "img") %>
+<div class="" id="">
+    <a href="/posts/<%= post.id%>" class="item" id="Masonry">
+        <!-- <span class=""><%= post.title %></span> -->
+        <%= image_tag(post.picture.url, class: "", id: "") %>
         </a>
   </div>
 <% end %>
 <%= will_paginate @posts %>
+<script src='masonry.pkgd.min.js'></script>
