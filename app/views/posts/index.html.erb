@@ -24,8 +24,8 @@
 <% @posts.each do |post| %>
 <div class="" id="">
     <a href="/posts/<%= post.id%>" class="item" id="Masonry">
-        <!-- <span class=""><%= post.title %></span> -->
-        <%= image_tag(post.picture.url, class: "", id: "") %>
+        <span class="text"><%= post.title %></span>
+        <%= image_tag(post.picture.url, class: "img", id: "") %>
         </a>
   </div>
 <% end %>
