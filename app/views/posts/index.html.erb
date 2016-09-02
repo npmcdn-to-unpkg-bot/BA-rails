@@ -22,10 +22,10 @@
 <br>
 
 <% @posts.each do |post| %>
-<div class="" id="">
+<div class="img" id="">
     <a href="/posts/<%= post.id%>" class="item" id="Masonry">
         <span class="text"><%= post.title %></span>
-        <%= image_tag(post.picture.url, class: "img", id: "") %>
+        <%= image_tag(post.picture.url, class: "hover11") %>
         </a>
   </div>
 <% end %>

@@ -94,3 +94,10 @@ jQuery(document).ready(function() {
     });
   });
 })
+
+// $(document).ready(function() {
+//   $("#Masonry").hover(function() {
+//       $(".text").css("opacity", "1");
+//     )
+//   }
+// });
