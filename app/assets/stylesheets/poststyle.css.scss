@@ -1,3 +1,5 @@
+
+
 h1 {
   text-align: center;
 }
@@ -26,7 +28,7 @@ h1 {
     /* border-radius: 5px; */
     display: inline;
     width: 340px;
-    text-align: center;
+    // text-align: center;
     background-color: #f1f1f1;
     font-weight: bolder;
     font-variant: small-caps;
@@ -37,6 +39,46 @@ h1 {
   width: 100%;
 }
 
+.text {
+  padding: 10px;
+  font-size: 16px;
+}
+
 .hover11:hover {
-  -webkit-filter: grayscale(70%);
+  -webkit-filter: grayscale(100%);
+}
+
+.show-picture {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.img-show {
+    margin-left: auto;
+    margin-right: auto;
+    background: #bfbfbf;
+    padding: 10px;
+    height: 100%;
+}
+
+.description-text {
+  float: left;
+}
+
+.styles-text {
+  text-align: center;
+}
+
+//TOPICS css
+
+.topic-image {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.topic-title {
+  text-align: center;
 }

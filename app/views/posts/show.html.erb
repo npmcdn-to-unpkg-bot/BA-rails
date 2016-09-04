@@ -1,34 +1,28 @@
 <%= render 'shared/page_title', title: @post.title %>
 
 
-  <div class="col-md-12">
-    <div class="row">
-    <div class="show_picture">
+  <div class="col-md-6">
+    <div class="show-picture">
       <%= image_tag(@post.picture.url, class: "img-show") if @post.picture? %>
-    </div>
     </div>
   </div>
 
-  <div class="col-md-12">
-    <div class="row">
-
+  <div class="col-md-6">
     <p class="description-text">
-      Description: <br>
+      <h1>description:</h1> <br>
       <%= @post.description %>
-
-      <h5>Brought by: <%= @post.user.username %></h5>
+      <br><br>
+      <!-- <h5>Brought by: <%= @post.user.username %></h5> -->
       <% if @post.topics.any? %>
-    <p>Styles: <%= render @post.topics %> </p>
+    <p class="styles-text">Styles: <%= render @post.topics %> </p>
     <% end %>
     </p>
   </div>
-</div>
-</div>
 
 <div class="col-md-12">
   <div class="editanddelete">
-    <span class='quite'><small> created: <%= time_ago_in_words(@post.created_at) %> ago,</small></span>
-     <span class='quite'><small>updated: <%= time_ago_in_words(@post.updated_at) %> ago</small></span>
+    <!-- <span class='quite'><small> created: <%= time_ago_in_words(@post.created_at) %> ago,</small></span>
+     <span class='quite'><small>updated: <%= time_ago_in_words(@post.updated_at) %> ago</small></span> -->
     <% if logged_in? %>
   <%= link_to "Edit", edit_post_path(@post), class: "btn btn-warning" %>
   <%= link_to "[Delete Posts]", @post, method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>

@@ -5,15 +5,19 @@
 
 <% @topic.posts.each do |post| %>
 <div class="row">
-  <div class="col-lg-8">
-  <h4><%= link_to post.title, posts_path(post) %></h4>
-  <p><%= post.description %></p>
-  <p>Topic: <%= render post.topics %></p>
-  </div>
-  <div class="col-md-4">
-    <%= image_tag(post.picture.url, class: "topic-image", style: "width: 39%;") if post.picture?  %>
-  </div>
+  <div class="">
+    <div class="col-lg-3">
+    <a href="/posts/<%= post.id%>">
+    <%= image_tag(post.picture.url, class: "topic-image") if post.picture?  %>
+    </a>
+    </div>
+    <div class="col-lg-9">
+      <h2 class="topic-title"><%= link_to post.title, post_path(post) %></h2>
+      <p><%= post.description %></p>
+      <p>Topic: <%= render post.topics %></p>
+    </div>
 
+  </div>
 </div>
 <hr/>
 <% end %>
