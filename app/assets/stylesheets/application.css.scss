@@ -4,6 +4,16 @@
  @import "font-awesome.min.css";
  @import "poststyle.css";
 
+ main.ng-enter {
+   transition:0.5s linear all;
+   opacity:0;
+ }
+
+ /* The finishing CSS styles for the enter animation */
+ main.ng-enter.ng-enter-active {
+   opacity:1;
+ }
+
 
  body {
    font-family: 'Lato', sans-serif !important;
@@ -20,6 +30,11 @@
    width: 230px;
  }
 
+a:hover{
+   color: #25cbd6;
+   text-decoration: none;
+ }
+
 ul#navbar {
   list-style: none;
   text-decoration: none;
@@ -32,10 +47,10 @@ ul#navbar {
   font-size: 10px;
 }
 
-ul#navbar:hover li > a {
-  text-decoration: none;
-  font-weight: lighter;
-}
+// ul#navbar:hover li > a {
+//   text-decoration: none;
+//   font-weight: lighter;
+// }
 
 a {
   color: black;
@@ -83,6 +98,14 @@ nav > ul > li {
     margin: auto;
     max-width:600px;
     font-size: 100%;
+  }
+
+  .rubyonrails {
+    width: 125px;
+  }
+
+  .jquery {
+    width: 146px;
   }
 
   //picture big one
@@ -161,9 +184,12 @@ nav > ul > li {
  }
 
    .footer p{
-    position: fixed;
-    bottom: 0;
-    height: 0;
-    background: #f0f0f0;
-    width: 100%;
+     position: fixed;
+     right: 0;
+     bottom: 0;
+     padding: 1em;
+     left: 0;
+     background-color: #efefef;
+     text-align: center;
+     margin-bottom: 0px;
   }
