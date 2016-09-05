@@ -18,6 +18,7 @@ gem 'bcrypt', '3.1.7'
 gem 'fog', '1.36.0'
 gem 'mail_form'
 gem 'simple_form'
+gem 'bootstrap_form'
 
 group :development, :test do
   gem 'byebug'

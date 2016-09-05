@@ -4,6 +4,7 @@
  @import "font-awesome.min.css";
  @import "poststyle.css";
 
+
  body {
    font-family: 'Lato', sans-serif !important;
    background-color: white;
@@ -120,7 +121,7 @@ nav > ul > li {
 
   h2 span {
    color: white;
-   font: bold 24px/45px Helvetica, Sans-Serif;
+   font: lighter 24px/45px Helvetica, Sans-Serif;
    letter-spacing: -1px;
    background: rgb(0, 0, 0); /* fallback color */
    background: rgba(0, 0, 0, 0.7);
@@ -184,6 +185,18 @@ nav > ul > li {
 //   }
 // }
  // HOME PAGE FINISH
+
+ // contacts page
+
+ .contact-me h2 {
+   text-align: center;
+ }
+
+ .contact-picture img{
+   height: 100px;
+  margin-left: 70px;
+  vertical-align: middle;
+ }
 
 .footer p{
   position: fixed;
