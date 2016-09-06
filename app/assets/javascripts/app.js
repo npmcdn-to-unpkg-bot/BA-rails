@@ -1,7 +1,12 @@
-var bravoAlberto = angular.module('bravoAlberto', ['ngAnimate']);
+var bravoAlberto = angular.module('bravoAlberto', ['ngAnimate', 'ngResource'
+  'infinite-scroll'
+]);
 
-bravoAlberto.controller('bravoController', function($scope) {
+bravoAlberto.controller('infinite-scroll-bravo', function($scope) {
 
-  $scope.message = "hello"
+  $scope.loadMore = function() {
+    console.log("Load More!!!");
+    $scope.contacts.loadMore();
+  };
 
 });

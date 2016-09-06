@@ -18,14 +18,19 @@
 </div>
 
 <br>
+<div ng-controller="infinite-scroll-bravo">
+
 
 <% @posts.each do |post| %>
-<div class="img" id="">
-    <a href="/posts/<%= post.id%>" class="item" id="Masonry">
+<div class="img "  id="">
+    <a href="/posts/<%= post.id%>" class="item  infinite-scroll="loadMore()" infinite-scroll-immediate-check="false" infinite-scroll-distance="1" " id="Masonry">
         <span class="text"><%= post.title %></span>
         <%= image_tag(post.picture.url, class: "hover11") %>
         </a>
   </div>
 <% end %>
+</div>
 <%= will_paginate @posts %>
 <script src='masonry.pkgd.min.js'></script>
+<script src="../assests/javascripts/ngInfiniteScroll/build/ng-infinite-scroll.min.js"></script>
+<script src="./bower_components/ngInfiniteScroll/build/ng-infinite-scroll.min.js" ></script>

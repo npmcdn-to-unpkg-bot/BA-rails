@@ -184,12 +184,29 @@ nav > ul > li {
  }
 
    .footer p{
-     position: fixed;
-     right: 0;
-     bottom: 0;
-     padding: 1em;
-     left: 0;
-     background-color: #efefef;
-     text-align: center;
-     margin-bottom: 0px;
+     display: block;
+   margin: auto;
+   text-align: right;
+   color: white;
+   margin-bottom: 6px;
+   position: fixed;
+   bottom: 0;
+   right: 35px;
+   background-color: rgba(0,0,0, 0.8);
+   padding: 5px;
+   border-radius: 8px;
+   z-index: 1000;
   }
+
+//   display: block;
+// margin: auto;
+// text-align: right;
+// color: white;
+// margin-bottom: 6px;
+// position: fixed;
+// bottom: 0;
+// right: 35px;
+// background-color: rgba(0,0,0, 0.8);
+// padding: 5px;
+// border-radius: 8px;
+// z-index: 1000;
